@@ -26,4 +26,5 @@ class AuthorsController < ApplicationController
 	  else
 	    render 'edit'
 	  end
+	end
 end
