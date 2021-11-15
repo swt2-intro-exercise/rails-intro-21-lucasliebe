@@ -18,10 +18,8 @@
 <% @authorslist = @paper.authors %>
 <% if @authorslist %>
   <p>
-  <strong>Authors:</strong>
-  <% @authorslist.each do |list| %>
-    <p><%= link_to author_path.find_by(id: list).name, author_path(list) %></p>
-  <% end %>
+  <strong>Author:</strong>
+  <%= @authorslist.first.name %>
   </p>
 <% end %>
 
