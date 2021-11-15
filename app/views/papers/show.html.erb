@@ -20,7 +20,7 @@
   <p>
   <strong>Authors:</strong>
   <% @authorslist.each do |list| %>
-    <p><%= link_to author.find_by(id: list).name, author_path(list) %></p>
+    <p><%= link_to Authors.find_by(id: list).name, author_path(list) %></p>
   <% end %>
   </p>
 <% end %>
