@@ -9,5 +9,6 @@ RSpec.describe Author, type: :model do
         expect(author.first_name).to eq("Alan")
         expect(author.last_name).to eq("Turing")
         expect(author.homepage).to eq("https://wikipedia.org/Alan_Turing")
+	expect(author.name).to eq("Alan Turing")
   end
 end
