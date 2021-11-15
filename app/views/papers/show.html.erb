@@ -15,11 +15,15 @@
   <%= @paper.year %>
 </p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @paper.authors.name %>
-</p>
-
+<% @authorslist = @paper.authors %>
+<% if @authorslist %>
+  <p>
+  <strong>Authors:</strong>
+  <% @authorslist.each do |list| %>
+    <p><%= link_to author.find_by(id: list).name, author_path(list) %></p>
+  <% end %>
+  </p>
+<% end %>
 
 <%= link_to 'Edit', edit_paper_path(@paper) %> |
 <%= link_to 'Back', papers_path %>
